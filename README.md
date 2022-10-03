@@ -1,2 +1,2 @@
 # chrome-extension-better-browsing
-my personal chrome extension for better browsing
+my backstage chrome extension for better browsing
