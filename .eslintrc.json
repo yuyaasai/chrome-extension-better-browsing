@@ -1,0 +1,38 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020
+    },
+    "rules": {
+        "no-var": ["error"],
+        "no-console": "off",
+        "no-constant-condition": "off",
+        "require-await": "error",
+        "semi": ["error", "always"],
+        "semi-spacing": [
+            "error",
+            {
+                "after": true,
+                "before": false
+            }
+        ],
+        "semi-style": ["error", "last"],
+        "strict": "error",
+        "no-extra-semi": "error",
+        "no-unexpected-multiline": "error",
+        "no-unreachable": "error",
+        "no-unused-labels":"error",
+        "no-unused-expressions":"error",
+        "no-unused-vars":"error",
+        "quotes": ["error", "single"]
+    },
+    "ignorePatterns": ["webpack.config.js", "node_modules"]
+}

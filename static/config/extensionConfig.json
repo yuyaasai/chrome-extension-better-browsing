@@ -1,0 +1,5 @@
+{
+    /*AutoDiscardableを無効にするURL: 正規表現は "/regex/opts" で記述 */
+    "disable_discarding_list": [
+    ]
+}

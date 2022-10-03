@@ -1,0 +1,37 @@
+{
+    "name": "better-browsing",
+
+    "version": "3.0.0",
+
+    "description": "my backstage chrome extension for better browsing",
+
+    "icons": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+
+    "permissions": ["webRequest", "tabs"],
+
+    "host_permissions": ["*://*/*"],
+
+    "background": {
+        "service_worker": "backgroundWorker.js"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "exclude_matches": ["*://localhost/*", "*://*.localhost/*"],
+            "js": ["contentAllUrlAllFrames.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+
+    "manifest_version": 3,
+
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}
