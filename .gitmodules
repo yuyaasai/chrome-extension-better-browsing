@@ -1,0 +1,3 @@
+[submodule "src/submodules/userscript-aws-console-colors"]
+	path = src/submodules/userscript-aws-console-colors
+	url = https://github.com/yuyaasai/userscript-aws-console-colors.git

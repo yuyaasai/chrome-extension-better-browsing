@@ -1,0 +1,7 @@
+{
+    "extends": "./tsconfig.json",
+    "include": ["src", ".*.js", "*.js", "webpack/webpack.config.js"],
+    "compilerOptions": {
+        "allowJs": true
+    }
+}
