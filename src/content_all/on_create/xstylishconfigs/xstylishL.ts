@@ -9,6 +9,7 @@ const xstylish_EyeFriendly: XstylishConfig = { // eslint-disable-line @typescrip
         ".salesforce",
         ".force.",
         "kojs.sukobuto.com",
+        ".codeply.com",
         /^.uo.i\.co\.jp$/,
         /^a\d\d.netlify.com$/,
         /\.nec.(?:d.v|s.g|l.c.)\./,
