@@ -18,7 +18,7 @@ const UuidStyles = [
     "font-weight: 400; background-color: #5a5a5a; color: #33ffff!important",
     "font-weight: 400; background-color: #5a5a5a; color: #ff4444!important"
 ]
-const AWS_CONFIG = ["AWS_ENABLED", "AWS_DECORATION_ENABLED"]
+const AWS_CONFIG = ["AWS_ENABLED", "AWS_DECORATION_ENABLED_なんか変なので無効"]
 const AWS_DISABLED = !AWS_CONFIG.includes("AWS_ENABLED")
 const AWS_DECORATION_DISABLED = !AWS_CONFIG.includes("AWS_DECORATION_ENABLED")
 const Days = ["日", "月", "火", "水", "木", "金", "土"]
@@ -370,14 +370,14 @@ const xstylishScript = (
     iframeAddedCallback: (iframe: HTMLIFrameElement, colorTask: Promise<{ contentBgColor: string }>) => void,
     iframeRemovedCallback: (iframe: HTMLIFrameElement) => void
 ) => {
+    const colorTask = setNavColorAsync(document, [
+        { pattern: /dev/i }
+    ])
+
     if (AWS_DISABLED) {
         console.log("AWS_DISABLED")
         return
     }
-
-    const colorTask = setNavColorAsync(document, [
-        { pattern: /dev/i }
-    ])
 
     new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
