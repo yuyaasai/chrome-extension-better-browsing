@@ -14,6 +14,9 @@ export default (window: Window) => {
     if (textMatches(loc.host, globalOption.ignoreDomains)) {
         return
     }
+    if (textMatches(loc.href, globalOption.ignoreUrls)) {
+        return
+    }
     if (textMatches(loc.pathname, globalOption.ignorePathnames)) {
         return
     }
