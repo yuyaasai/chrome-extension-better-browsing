@@ -21,7 +21,7 @@ const xstylish_EyeFriendly: XstylishConfig = { // eslint-disable-line @typescrip
 a,address,b,blockquote,body,button,caption,content,details,div,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,input,
 label,legend,li,main,option,p,progress,section,select,small,span,strong,summary,sup,sub,tbody,td,th,tr,textarea{
     font-family:
-    "BIZ UDPゴシック", MeiryoKe_Gothic,
+    "BIZ UDPゴシック",
     "mk-icomoon", icomoon, FontAwesome,
     -apple-system, BlinkMacSystemFont, "Lucida Grande", "Segoe UI",
     "Hiragino Maru Gothic ProN",
