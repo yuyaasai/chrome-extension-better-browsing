@@ -1,4 +1,4 @@
-import { XstylishConfig, textMatches } from "../XstylishConfigLib"
+import { type XstylishConfig, textMatches } from "../XstylishConfigLib"
 
 const xstylish_EyeFriendly: XstylishConfig = { // eslint-disable-line @typescript-eslint/naming-convention
     name: "",
