@@ -27,15 +27,20 @@ const xstylish_AccessBlocker = { // eslint-disable-line @typescript-eslint/namin
     name: "AccessBlocker",
     targetPage: loc => textMatches(loc.host, [
         "twitter.com",
-        "x.com",
+        /^x.com$/,
         "www.youtube.com"
     ]),
     style: "body { display: none }",
     script: () => {
-        document.body.innerHTML = "Access Blocked"
-        setInterval(() => {
-            document.body.innerHTML = "Access Blocked"
-        }, 1000)
+        let interval = 1000
+        const block = () => {
+            for (const html of document.getElementsByTagName("html")) {
+                html.innerHTML = "<head></head><body>Access Blocked</body>"
+            }
+            interval *= 2
+            setTimeout(block, interval)
+        }
+        block()
     }
 } satisfies XstylishConfig
 

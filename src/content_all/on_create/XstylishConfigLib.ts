@@ -18,7 +18,7 @@ export interface XstylishConfig {
 //
 export const textMatches = (text: string, patterns: Array<string | RegExp>) => {
     for (const pattern of patterns) {
-        if (pattern instanceof RegExp ? pattern.test(text) : text.includes(pattern)) {
+        if (typeof pattern === "string" ? text.includes(pattern) : pattern.test(text)) {
             return true
         }
     }
