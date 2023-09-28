@@ -1,5 +1,5 @@
 "use strict"
-import { XstylishConfig } from "../XstylishConfigLib"
+import { type XstylishConfig } from "../XstylishConfigLib"
 import { setNavColorAsync } from "../../../submodules/userscript-aws-console-colors/aws-console-colors.user"
 
 const UuidStyles = [
@@ -516,7 +516,9 @@ const iframeRemovedCallback = (iframe: HTMLIFrameElement) => {
 const xstylish_Aws: XstylishConfig = { // eslint-disable-line @typescript-eslint/naming-convention
     name: "aws",
     targetPage: loc => loc.href.includes(".console.aws.amazon.com/") || loc.href.startsWith("https://console.aws.amazon.com/"),
-    script: () => xstylishScript(iframeAddedCallback, iframeRemovedCallback)
+    script: () => {
+        xstylishScript(iframeAddedCallback, iframeRemovedCallback)
+    }
 }
 
 export default (dest: XstylishConfig[]) => {
