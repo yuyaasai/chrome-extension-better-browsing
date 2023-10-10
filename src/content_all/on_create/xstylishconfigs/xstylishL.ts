@@ -1,8 +1,9 @@
+// cspell:disable
 import { type XstylishConfig, textMatches } from "../XstylishConfigLib"
 
 const xstylish_EyeFriendly: XstylishConfig = { // eslint-disable-line @typescript-eslint/naming-convention
     name: "",
-    targetPage: loc => !textMatches(loc.host, [ // 除外リスト
+    targetPage: loc => !textMatches(loc.host, [ // 除外リスト (ドメイン)
         "slideshare",
         "goworkship.com",
         "fern",
@@ -15,7 +16,9 @@ const xstylish_EyeFriendly: XstylishConfig = { // eslint-disable-line @typescrip
         /\.nec.(?:d.v|s.g|l.c.)\./,
         /^[a-z]+.azure.com$/,
         /(?<!www)\.google\.com$/,
-        /([a-z]+\.)?an.e..a..net$/
+        /([a-z]+\.)?an.e..a..net$/,
+    ]) && !textMatches(loc.href, [ // 除外リスト (URL)
+        /\/webssh\/host/ // Azure の WebSSH
     ]),
     style: `
 a,address,b,blockquote,body,button,caption,content,details,div,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,input,
