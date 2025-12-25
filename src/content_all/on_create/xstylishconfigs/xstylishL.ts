@@ -62,6 +62,9 @@ i.[class^="icon-"], i.[class*=" icon-"] {
 /*AzureDevOps*/
 .ms-Icon, .ms-Button-icon, .ms-SearchBox-icon, .ms-ContextualMenu-icon, [class^="ms-Icon-"], [class*=" ms-Icon-"], .ms-TitleBar--iconContainer { font-family: AzureDevOpsMDL2Assets, FabricMDL2InsightIcon, FabricMDL2Icons, FabricMDL2Icons-0, FabricMDL2Icons-1, FabricMDL2Icons-2, FabricMDL2Icons-3, FabricMDL2Icons-4, FabricMDL2Icons-5, FabricMDL2Icons-6, FabricMDL2Icons-7, FabricMDL2Icons-8, FabricMDL2Icons-9, FabricMDL2Icons-10, FabricMDL2Icons-11, FabricMDL2Icons-12!important }
 
+/*SendGrid*/
+.sg-icon { font-family: styleguideicons!important }
+
 /*Others*/
 .docon { font-family: docons!important }
 .fa, .fab, .far, .fas { font-family: icomoon, "Font Awesome 5 Brands", "Font Awesome 5 Free", FontAwesome!important }
